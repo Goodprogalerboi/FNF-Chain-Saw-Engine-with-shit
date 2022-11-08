@@ -143,7 +143,7 @@ class MainMenuState extends MusicBeatState
 			else if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'credits')
-					MusicBeatState.switchState(new CreditsState());
+					MusicBeatState.switchState(new OutdatedState());
 				else
 				{
 					selectedSomething = true;
