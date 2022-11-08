@@ -102,7 +102,7 @@ class MainMenuState extends MusicBeatState
 			"Friday Night Funkin': "
 			+ gameVer
 			+ ' - '
-			+ 'Chain-Saw Engine: '
+			+ 'Chain-Saw Engine with SHIT : '
 			+ Application.current.meta.get('version')
 			+ nightly, 12);
 		versionShit.setFormat(Paths.font("vcr.ttf"), 16, FlxColor.WHITE, LEFT, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
@@ -143,7 +143,7 @@ class MainMenuState extends MusicBeatState
 			else if (controls.ACCEPT)
 			{
 				if (optionShit[curSelected] == 'credits')
-					Main.toast.create('Alert!', 0xFFFF0000, 'Not Maded Menu!');
+					MusicBeatState.switchState(new CreditsState());
 				else
 				{
 					selectedSomething = true;
@@ -212,7 +212,7 @@ class MainMenuState extends MusicBeatState
 					Main.toast.create('No Mods Installed!', 0xFFFFFF00, 'Please add mods to be able to access the menu!');
 			#end
 			case 'options':
-				MusicBeatState.switchState(new OptionsState());
+				MusicBeatState.switchState(MusicBeatState.new OptionsState());
 		}
 	}
 
